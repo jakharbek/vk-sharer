@@ -1,7 +1,6 @@
 <?php
 
 namespace jakharbek\vksharer;
-use \BW\Vkontakte;
 
 class VK
 {
@@ -109,5 +108,21 @@ class VK
             'message' => $message,
             'attachments' => $link
         ]);
+    }
+
+    /**
+     * @param $client_id
+     * @param $app_id
+     * @param $secret_code
+     * @return VK
+     */
+    public static function &getInstance($client_id, $app_id, $secret_code)
+    {
+        $vk = new self();
+        $vk->client_id = $client_id;
+        $vk->app_id = $app_id;
+        $vk->secret_code = $secret_code;
+        $vk->init();
+        return $vk;
     }
 }
