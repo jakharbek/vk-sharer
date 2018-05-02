@@ -102,7 +102,7 @@ class VK
      * @param $link
      * @return mixed
      */
-    public function post($message,$link){
+    public function post($message,$link = ""){
         return $this->vk->api('wall.post',[
             'owner_id' => $this->client_id,
             'message' => $message,

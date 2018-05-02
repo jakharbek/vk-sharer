@@ -256,7 +256,7 @@ class Vkontakte
         if (count($query) > 0) {
             $q .= '&'; // Add "&" sign for access_token if query exists
         }
-        $url = 'https://api.vk.com/method/' . $method . '?' . $q . 'access_token=' . $this->accessToken->access_token;
+        $url = 'https://api.vk.com/method/' . $method . '?' . $q . 'access_token=' . $this->accessToken->access_token.'&v=2';
         $result = json_decode($this->curl($url));
         if (isset($result->response)) {
             return $result->response;
