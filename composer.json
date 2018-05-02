@@ -1,0 +1,24 @@
+{
+    "name": "jakharbek/vk-sharer",
+    "type": "library",
+    "description": "Vk sharer",
+    "keywords": ["vk", "sharer"],
+    "homepage": "http://rasmiy.uz/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Javharbek",
+            "email": "javharbek@umail.uz",
+            "homepage": "https://github.com/javkharbek"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "bocharsky-bw/vkontakte-php-sdk": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "jakharbek\\vksharer\\": "src/"
+        }
+    }
+}
